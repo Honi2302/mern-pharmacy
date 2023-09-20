@@ -18,7 +18,7 @@ const Update = () => {
       },[])
 
       const getDataFromAPI = async ()=>{
-           let result = await fetch(`http://localhost:5000/update/${params.id}`)
+           let result = await fetch(`https://mern-pharmacy.vercel.app/update/${params.id}`)
            result = await result.json()
            console.log(result)
            setQuantity(result.Quantity)
@@ -31,7 +31,7 @@ const Update = () => {
       }
 
       const updateProduct = async ()=>{
-            let result = await fetch(`http://localhost:5000/update/${params.id}`, 
+            let result = await fetch(`https://mern-pharmacy.vercel.app/update/${params.id}`, 
             {
                   method:"PUT",
                   body: JSON.stringify({Quantity, medicineName, saltName, MG, category, ExpireDate, MRP}), 
