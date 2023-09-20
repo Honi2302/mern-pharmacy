@@ -20,7 +20,7 @@ const AddProduct = () => {
             return false
       }
 
-      const url = "http://localhost:5000/addstock"
+      const url = "https://mern-pharmacy.vercel.app/addstock"
       const response = await axios.post(url, {
             Quantity, medicineName, saltName, MG, category, ExpireDate, MRP, Rate
       })
